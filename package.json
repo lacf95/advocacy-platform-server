@@ -1,0 +1,27 @@
+{
+  "name": "@advocacy-platform/server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "npx serverless deploy -v --stage dev",
+    "start": "npx nodemon --exec 'npx serverless offline --stage local'"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "UNLICENSED",
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.1.0",
+    "eslint-plugin-import": "^2.20.2",
+    "nodemon": "^2.0.3",
+    "serverless": "^1.68.0",
+    "serverless-dotenv-plugin": "^2.4.2",
+    "serverless-offline": "^6.1.4"
+  },
+  "dependencies": {
+    "camelcase-keys": "^6.2.2",
+    "got": "^11.0.2"
+  }
+}

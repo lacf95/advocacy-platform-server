@@ -1,0 +1,33 @@
+service: advocacy-platform
+app: advocacy-platform
+org: lacf95
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  profile: tangoio
+  region: ${env:AWS_REGION, 'us-east-1'}
+  stage: ${env:STAGE, 'local'}
+
+custom:
+  dotenv:
+    exclude:
+      - AWS_REGION
+
+plugins:
+  - serverless-offline
+  - serverless-dotenv-plugin
+
+functions:
+  posts:
+    handler: src/handler.getPosts
+    events:
+      - http:
+          path: posts
+          method: get
+  access_token:
+    handler: src/handler.getLongLivedAccessToken
+    events:
+      - http:
+          path: long_lived_access_token
+          method: get
