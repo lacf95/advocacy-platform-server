@@ -25,9 +25,11 @@ functions:
       - http:
           path: posts
           method: get
+          cors: true
   access_token:
     handler: src/handler.getLongLivedAccessToken
     events:
       - http:
           path: long_lived_access_token
           method: get
+          cors: true
