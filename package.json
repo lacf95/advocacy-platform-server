@@ -22,6 +22,6 @@
   },
   "dependencies": {
     "camelcase-keys": "^6.2.2",
-    "got": "^11.0.2"
+    "got": "^11.8.5"
   }
 }
